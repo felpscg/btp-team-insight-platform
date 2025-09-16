@@ -7,25 +7,32 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^9.1.0",
-    "express": "^4",
-    "axios": "^1.6.0" 
+    "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
+    "@sapui5/ts-types": "^1.92.2",
+    "@ui5/project": "^4.0.6",
+    "axios": "^1.6.0",
+    "eslint": "^7.32.0",
+    "express": "^4"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
+    "@cap-js/cds-typer": ">=0.1",
     "@cap-js/cds-types": "^0.11.0",
     "@cap-js/sqlite": "^2",
     "@types/node": "^22.0.0",
+    "cds-plugin-ui5": "^0.9.3",
+    "sqlite3": "^5.1.0",
     "tsx": "^4",
-    "typescript": "^5",
-    "@cap-js/cds-typer": ">=0.1",
-    "sqlite3": "^5.1.0"
+    "typescript": "^5"
   },
   "scripts": {
     "start": "cds-serve",
     "build": "cds build",
-    "deploy": "cds deploy --to sqlite"
+    "deploy": "cds deploy --to sqlite",
+    "watch-team.insightplatform": "cds watch --open team.insightplatform/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-team_insight_platform": "cds watch --open com.br.fiori.teaminsightplatform/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"
@@ -34,11 +41,16 @@
     "requires": {
       "db": {
         "kind": "sqlite",
-        "model": ["db"]
+        "model": [
+          "db"
+        ]
       }
     },
     "build": {
       "target": "gen"
     }
-  }
+  },
+  "workspaces": [
+    "app/*"
+  ]
 }

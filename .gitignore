@@ -6,12 +6,14 @@ connection.properties
 default-*.json
 .cdsrc-private.json
 gen/
+app/
 node_modules/
 target/
 
 # Web IDE, App Studio
 .che/
 .gen/
+.vscode
 
 # MTA
 *_mta_build_tmp
@@ -32,3 +34,4 @@ mta_archives/
 
 # @cap-js/cds-typer
 @cds-models
+
