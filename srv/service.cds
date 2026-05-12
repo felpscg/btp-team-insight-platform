@@ -33,7 +33,7 @@ service MainService {
 service Feedbacks{
     entity Employees   as projection on teamculture.Employees;
   entity Teams       as projection on teamculture.Teams;
-  entity Skills      as projection on teamculture.Skills;
+  entity SkillsFeedback      as projection on teamculture.SkillsFeedback;
   entity EmployeeSkills      as projection on teamculture.EmployeeSkills;
   entity Surveys     as projection on teamculture.Surveys;
   entity Questions   as projection on teamculture.Questions;

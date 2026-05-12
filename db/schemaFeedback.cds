@@ -24,10 +24,10 @@ entity Employees : cuid, managed {
   active      : Boolean default true;
 
   team        : Association to Teams;
-  skills      : Association to many EmployeeSkills on skills.employee = $self;
+  skillsEmployee      : Association to many EmployeeSkills on skillsEmployee.employee = $self;
 }
 
-entity Skills : cuid {
+entity SkillsFeedback : cuid {
   name        : String(50);
   description : String(255);
   employees   : Association to many EmployeeSkills on employees.skill = $self;
@@ -36,7 +36,7 @@ entity Skills : cuid {
 // --- Join Table (N:N) ---
 entity EmployeeSkills : cuid {
   employee    : Association to Employees;
-  skill       : Association to Skills;
+  skill       : Association to SkillsFeedback;
   level       : Integer;   // opcional: 1=junior, 5=expert
   acquiredAt  : Date;
 }
