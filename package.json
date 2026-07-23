@@ -32,7 +32,8 @@
     "build": "cds build",
     "deploy": "cds deploy --to sqlite",
     "watch-team.insightplatform": "cds watch --open team.insightplatform/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-team_insight_platform": "cds watch --open com.br.fiori.teaminsightplatform/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-team_insight_platform": "cds watch --open com.br.fiori.teaminsightplatform/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-teaminsightplatform": "cds watch --open com.teaminsightplatform/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"
