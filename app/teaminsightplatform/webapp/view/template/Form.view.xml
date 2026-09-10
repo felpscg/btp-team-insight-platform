@@ -1,0 +1,16 @@
+<mvc:View
+	controllerName="com.teaminsightplatform.controller.template.Form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+	xmlns:smartForm="sap.ui.comp.smartform"
+>
+<smartForm:SmartForm id="idSmartForm" busy="{= ${model>busy} ? true : false }" editable="{= ${model>editable} ? true : false }" >
+    
+
+</smartForm:SmartForm>
+
+</mvc:View>

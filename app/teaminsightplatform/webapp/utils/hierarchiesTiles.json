@@ -1,0 +1,328 @@
+{
+	"group": [
+		{
+			"id": "_group1",
+			"label": "Controle Pessoal",
+			"title": "title_group1"
+		},
+		{
+			"id": "_group2",
+			"label": "Controle de Funcionários",
+			"title": "title_group2"
+		},
+		{
+			"id": "_group3",
+			"label": "Controle Empresarial",
+			"title": "title_group3"
+		},
+		{
+			"id": "_group4",
+			"label": "Controle de Projetos",
+			"title": "title_group4"
+		},
+		{
+			"id": "_group5",
+			"label": "Controle de Feedbacks",
+			"title": "title_group5"
+		},
+		{
+			"id": "_group6",
+			"label": "Controle de Qustionários",
+			"title": "title_group6"
+		},
+		{
+			"id": "_group7",
+			"label": "KPIs",
+			"title": "title_group7"
+		}
+	],
+	"type": [
+		{
+			"id": "1",
+			"label": "Analytics",
+			"route": "RouteAnalytics"
+		},
+		{
+			"id": "2",
+			"label": "List",
+			"route": "RouteList"
+		},
+		{
+			"id": "3",
+			"label": "Form",
+			"route": "RouteForm"
+		}
+	],
+	"tiles": [
+		{
+			"idKey": "0",
+			"title": "Tarefas",
+			"subtitle": "subTitle_tile0",
+			"footer": "footerTitle_tile0",
+			"label": "Tarefas",
+			"state": "Enabled",
+			"icon": "sap-icon://task",
+			"group": "_group1",
+			"size": "1x1",
+			"entity": "Task",
+			"routeId": "2"
+		},
+		{
+			"idKey": "1",
+			"title": "Usuários",
+			"subtitle": "subTitle_tile1",
+			"footer": "footerTitle_tile1",
+			"label": "Usuários",
+			"state": "Enabled",
+			"icon": "sap-icon://employee",
+			"group": "_group2",
+			"size": "1x1",
+			"entity": "User",
+			"routeId": "2"
+		},
+		{
+			"idKey": "2",
+			"title": "Membros da Equipe",
+			"subtitle": "subTitle_tile2",
+			"footer": "footerTitle_tile2",
+			"label": "Membros da Equipe",
+			"state": "Enabled",
+			"icon": "sap-icon://group",
+			"group": "_group2",
+			"size": "1x1",
+			"entity":"Team",
+			"routeId": "2"
+		},
+		{
+			"idKey": "3",
+			"title": "Check-ins",
+			"subtitle": "subTitle_tile3",
+			"footer": "footerTitle_tile3",
+			"label": "Check-ins",
+			"state": "Enabled",
+			"icon": "sap-icon://checklist",
+			"group": "_group1",
+			"size": "1x1",
+			"entity": "CheckIn",
+			"routeId": "2"
+		},
+		{
+			"idKey": "4",
+			"title": "Avaliação Semanal",
+			"subtitle": "subTitle_tile4",
+			"footer": "footerTitle_tile4",
+			"label": "Avaliação Semanal",
+			"state": "Enabled",
+			"icon": "sap-icon://chart-table",
+			"group": "_group1",
+			"size": "1x1",
+			"entity":"weeklyAnalysis",
+			"routeId": "2"
+		},
+		{
+			"idKey": "5",
+			"title": "Equipes",
+			"subtitle": "subTitle_tile5",
+			"footer": "footerTitle_tile5",
+			"label": "Equipes",
+			"state": "Enabled",
+			"icon": "sap-icon://multiple-bar-chart",
+			"group": "_group3",
+			"size": "1x1",
+			"entity": "Team",
+			"routeId": "2"
+		},
+		{
+			"idKey": "6",
+			"title": "Funções",
+			"subtitle": "subTitle_tile6",
+			"footer": "footerTitle_tile6",
+			"label": "Funções",
+			"state": "Enabled",
+			"icon": "sap-icon://role",
+			"group": "_group3",
+			"size": "1x1",
+			"entity": "Role",
+			"routeId": "2"
+		},
+		{
+			"idKey": "7",
+			"title": "Senioridades",
+			"subtitle": "subTitle_tile7",
+			"footer": "footerTitle_tile7",
+			"label": "Senioridades",
+			"state": "Enabled",
+			"icon": "sap-icon://person-placeholder",
+			"group": "_group3",
+			"size": "1x1",
+			"entity": "Seniority",
+			"routeId": "2"
+		},
+		{
+			"idKey": "8",
+			"title": "Projetos",
+			"subtitle": "subTitle_tile8",
+			"footer": "footerTitle_tile8",
+			"label": "Projetos",
+			"state": "Enabled",
+			"icon": "sap-icon://project-definition",
+			"group": "_group4",
+			"size": "1x1",
+			"entity": "Project",
+			"routeId": "2"
+		},
+		{
+			"idKey": "9",
+			"title": "Alocações",
+			"subtitle": "subTitle_tile9",
+			"footer": "footerTitle_tile9",
+			"label": "Alocações",
+			"state": "Enabled",
+			"icon": "sap-icon://process",
+			"group": "_group4",
+			"size": "1x1",
+			"entity": "Allocation",
+			"routeId": "2"
+		},
+		{
+			"idKey": "10",
+			"title": "Competências",
+			"subtitle": "subTitle_tile10",
+			"footer": "footerTitle_tile10",
+			"label": "Competências",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://skills",
+			"group": "_group3",
+			"size": "1x1",
+			"entity": "Skill",
+			"routeId": "2"
+		},
+		{
+			"idKey": "11",
+			"title": "Competências do Usuário",
+			"subtitle": "subTitle_tile11",
+			"footer": "footerTitle_tile11",
+			"label": "Competências do Usuário",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://employee-approvals",
+			"group": "_group3",
+			"size": "1x1",
+			"entity": "UserSkill",
+			"routeId": "2"
+		},
+		{
+			"idKey": "12",
+			"title": "Status de Tarefas",
+			"subtitle": "subTitle_tile12",
+			"footer": "footerTitle_tile12",
+			"label": "Status de Tarefas",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://status-inactive",
+			"group": "_group1",
+			"size": "1x1",
+			"entity": "TaskStatus",
+			"routeId": "2"
+		},
+		{
+			"idKey": "13",
+			"title": "Comentários",
+			"subtitle": "subTitle_tile13",
+			"footer": "footerTitle_tile13",
+			"label": "Comentários",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://comment",
+			"group": "_group1",
+			"size": "1x1",
+			"entity": "Comment",
+			"routeId": "2"
+		},
+		{
+			"idKey": "14",
+			"title": "Tags de Tarefas",
+			"subtitle": "subTitle_tile14",
+			"footer": "footerTitle_tile14",
+			"label": "Tags de Tarefas",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://tag",
+			"group": "_group1",
+			"size": "1x1",
+			"entity": "TaskTag",
+			"routeId": "2"
+		},
+		{
+			"idKey": "15",
+			"title": "Pesquisas",
+			"subtitle": "subTitle_tile15",
+			"footer": "footerTitle_tile15",
+			"label": "Pesquisas",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://survey",
+			"group": "_group5",
+			"size": "1x1",
+			"entity": "Survey",
+			"routeId": "2"
+		},
+		{
+			"idKey": "16",
+			"title": "Perguntas",
+			"subtitle": "subTitle_tile16",
+			"footer": "footerTitle_tile16",
+			"label": "Perguntas",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://question-mark",
+			"group": "_group6",
+			"size": "1x1",
+			"entity": "Question",
+			"routeId": "2"
+		},
+		{
+			"idKey": "17",
+			"title": "Respostas",
+			"subtitle": "subTitle_tile17",
+			"footer": "footerTitle_tile17",
+			"label": "Respostas",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://message-information",
+			"group": "_group6",
+			"size": "1x1",
+			"entity": "Answer",
+			"routeId": "2"
+		},
+		{
+			"idKey": "18",
+			"title": "Feedbacks",
+			"subtitle": "subTitle_tile18",
+			"footer": "footerTitle_tile18",
+			"label": "Feedbacks",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://feedback",
+			"group": "_group5",
+			"size": "1x1",
+			"entity": "Feedback",
+			"routeId": "2"
+		},
+		{
+			"idKey": "19",
+			"title": "Funcionários",
+			"subtitle": "subTitle_tile19",
+			"footer": "footerTitle_tile19",
+			"label": "Funcionários",
+			"routes": null,
+			"state": "Enabled",
+			"icon": "sap-icon://personnel-view",
+			"group": "_group5",
+			"size": "1x1",
+			"entity": "Employee",
+			"routeId": "2"
+		}
+	]
+}

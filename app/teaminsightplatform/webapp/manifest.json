@@ -1,0 +1,170 @@
+{
+  "_version": "1.85.0",
+  "sap.app": {
+    "id": "com.teaminsightplatform",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.27.0",
+      "toolsId": "bb403aa6-a185-4529-87a0-06aaf7c0eb85"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/main/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      },
+      "tiles": {
+        "uri": "utils/hierarchiesTiles.json",
+        "type": "JSON"
+      },
+      "basePage": {
+        "uri": "utils/basePage.json",
+        "type": "JSON"
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "ZSBFeedback-manage": {
+          "semanticObject": "ZSBFeedback",
+          "action": "manage",
+          "title": "{{ZSBFeedback-manage.flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.149.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.teaminsightplatform.i18n.i18n"
+        }
+        },
+        "tiles":{
+          "dataSource": "tiles"
+        },
+      "contentPage": {
+        "dataSource": "basePage"
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.teaminsightplatform.view",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "RouteView",
+          "pattern": ":?query:",
+          "target": [
+            "TargetView"
+          ]
+        },{
+          "name": "RouteList",
+          "pattern": "template/List{?query}",
+          "target": [
+            "TargetList"
+          ]
+        },{
+          "name": "RouteForm",
+          "pattern": ":?query:",
+          "target": [
+            "TargetForm"
+          ]
+        },{
+          "name": "RouteAnalytics",
+          "pattern": ":?query:",
+          "target": [
+            "TargetAnalytics"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView": {
+          "id": "View",
+          "name": "View"
+        },"TargetList": {
+          "id": "List",
+          "name": "template/List"
+        },"TargetForm": {
+          "id": "Form",
+          "name": "Form"
+        },"TargetAnalytics": {
+          "id": "Analytics",
+          "name": "Analytics"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.teaminsightplatform.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

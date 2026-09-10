@@ -6,22 +6,18 @@ namespace my.company;
 // PESSOAS, TIMES E PROJETOS
 // ==========================
 
-
-
-
-
-
-
-
-
-
+type genderType : Integer enum {
+  @title: 'Masculino' Male = 1;
+  @title: 'Feminino' Feminino = 2;
+  @title: 'Outro' Other = 3;
+}
 entity Users {
   key ID         : UUID default uuid();
   name           : String(100);
   email          : String(150);
   documentId     : String(20);
   birthDate      : Date;
-  gender         : String(20);
+  gender         : genderType;
   phone          : String(20);
 
   role           : Association to Roles;
@@ -29,8 +25,8 @@ entity Users {
   manager        : Association to Users;
 
   isActive       : Boolean default true;
-  createdAt      : Timestamp;
-  updatedAt      : Timestamp;
+  createdAt      : Timestamp default current_timestamp;
+  updatedAt      : Timestamp default current_timestamp;
 }
 
 entity Roles {

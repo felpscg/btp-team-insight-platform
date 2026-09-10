@@ -1,0 +1,10 @@
+<mvc:View
+	controllerName="com.teaminsightplatform.controller.template.Analytics"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+</mvc:View>

@@ -14,9 +14,6 @@
     "eslint": "^7.32.0",
     "express": "^4"
   },
-  "engines": {
-    "node": ">=20"
-  },
   "devDependencies": {
     "@cap-js/cds-typer": ">=0.1",
     "@cap-js/cds-types": "^0.11.0",
@@ -27,13 +24,15 @@
     "tsx": "^4",
     "typescript": "^5"
   },
+  "engines": {
+    "node": ">=20"
+  },
+
   "scripts": {
     "start": "cds-serve",
+    "watch": "cds watch",
     "build": "cds build",
-    "deploy": "cds deploy --to sqlite",
-    "watch-team.insightplatform": "cds watch --open team.insightplatform/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-team_insight_platform": "cds watch --open com.br.fiori.teaminsightplatform/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-teaminsightplatform": "cds watch --open com.teaminsightplatform/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "deploy": "cds deploy --to sqlite"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"

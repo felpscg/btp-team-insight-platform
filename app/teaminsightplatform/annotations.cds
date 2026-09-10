@@ -1,0 +1,1 @@
+using MainService as service from '../../srv/service';

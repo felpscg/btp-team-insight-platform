@@ -1,0 +1,51 @@
+<mvc:View
+	controllerName="com.teaminsightplatform.controller.template.List"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:f="sap.f"
+	xmlns:layout="sap.ui.layout"
+>
+	<f:DynamicPage busy="{= ${contentPage>/busy} }">
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="{= ${contentPage>/content/title} }" />
+				</f:heading>
+				<f:content>
+					<OverflowToolbar>
+					</OverflowToolbar>
+				</f:content>
+				<f:actions>
+					<Button
+						text="Edit"
+						type="Emphasized"
+						press=".toggleAreaPriority" />
+					<Button
+						text="Delete"
+						type="Transparent" />
+				</f:actions>
+				<f:navigationActions>
+				</f:navigationActions>
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:content>
+
+		</f:content>
+	</f:DynamicPage>
+	<!-- <smartTable:SmartTable
+		id="smartTable"
+		tableType="ResponsiveTable"
+		useExportToExcel="true"
+		useVariantManagement="true"
+		useTablePersonalisation="true"
+		header="List"
+		showRowCount="true"
+		enableAutoBinding="true"
+		busyIndicatorDelay="0"	>
+		</smartTable:SmartTable> -->
+</mvc:View>
